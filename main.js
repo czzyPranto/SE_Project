@@ -12,8 +12,8 @@
         const password = passwordInput.value;
         const email = emailInput.value;
 
-        if (password !== '223058' && password !== 'c223058') {
-            alert('Incorrect password');
+        if (!/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,32}$/.test(password)) {
+            alert('Password must be 6-32 characters long, include at least one letter, one number, and one special character.');
             return;
         }
 
